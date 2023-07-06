@@ -174,7 +174,7 @@ else{
       <Box borderLeft={"2px solid black"} borderRight={"2px solid black"} paddingLeft={"10"}  paddingRight={"10"}  h={"50px"} onClick={()=>{
         navigate("/")
       }}>
-        <Heading>LET IT BEE.CO</Heading>
+        <Heading>Tele Medicine</Heading>
       </Box>
 
       <Box>
