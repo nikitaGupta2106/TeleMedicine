@@ -81,13 +81,20 @@ const ProductDetails = () => {
       <Heading padding="20px" color="rgb(0,82,93)">
         {details.category}
       </Heading>
-      <Flex margin="20px 70px">
+      <Flex
+        margin="20px 70px"
+        direction={{ base: "column", sm: "column", md: "row", lg: "row" }}
+      >
         <Box
           p="4"
-          w="50%"
-          padding="20px 150px"
+          w={{ base: "100%", sm: "100%", md: "50%", lg: "50%" }}
+          padding={{
+            base: "20px 50px",
+            sm: "20px 100px",
+            md: "20px 100px",
+            lg: "20px 150px",
+          }}
           boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"
-          //   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
         >
           <Image
             src={details.image}
@@ -100,7 +107,7 @@ const ProductDetails = () => {
 
         <Flex
           p="4"
-          w="50%"
+          w={{ base: "100%", sm: "100%", md: "50%", lg: "50%" }}
           direction="column"
           justifyContent="space-between"
           padding="20px"

@@ -39,7 +39,9 @@ const HomePage = () => {
         justifyContent="flex-start"
         padding="20px"
       >
-        <Heading style={{ fontSize: "60px" }}>
+        <Heading
+          fontSize={{ base: "40px", sm: "50px", md: "60px", lg: "60px" }}
+        >
           The Place where your health <br />
           matters most.
         </Heading>
@@ -64,7 +66,12 @@ const HomePage = () => {
           </Stack>
         </Center>
         <Grid
-          templateColumns="repeat(3, 1fr)"
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            sm: "repeat(2, 1fr)",
+            md: "repeat(3, 1fr)",
+            lg: "repeat(3, 1fr)",
+          }}
           gap={6}
           padding="10px 80px"
           mt="20px"
