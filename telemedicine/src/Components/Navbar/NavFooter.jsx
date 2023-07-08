@@ -7,6 +7,10 @@ const NavFooter = () => {
       style={{
         background: "black",
         boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+        // position: "fixed",
+        left: 0,
+        bottom: 0,
+        width: "100%",
       }}
     >
       {/* <Flex color="white" justifyContent="space-evenly" padding="50px 80px"> */}

@@ -4,6 +4,8 @@ import {
   PRODUCT_SUCCESS,
   MY_CART,
   MY_FAV,
+  UPDATE_CART,
+  UPDATE_FAVORITES,
 } from "./actionType";
 
 const initialState = {
@@ -41,6 +43,9 @@ const reducer = (state = initialState, { type, payload }) => {
       return { ...state, cart: [...state.cart, payload] };
     }
 
+    case UPDATE_CART: {
+      return { ...state, cart: payload };
+    }
     case MY_FAV: {
       const isProductInFav = state.favourites.some(
         (item) => item.id === payload.id
@@ -57,6 +62,9 @@ const reducer = (state = initialState, { type, payload }) => {
           favourites: [...state.favourites, payload],
         };
       }
+    }
+    case UPDATE_FAVORITES: {
+      return { ...state, favourites: payload };
     }
 
     default:
