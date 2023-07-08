@@ -120,8 +120,8 @@ const Cart = () => {
                 m={10}
                 gap={10}
               >
-                <GridItem area={"Img"} w={200} h={100} boxShadow="md">
-                  <Image src={prod.image} />
+                <GridItem area={"Img"} w={200} h={150} boxShadow="md">
+                  <Image w="100%" h="150px" src={prod.image} />
                 </GridItem>
                 <GridItem area={"Inc"}>
                   <Button
