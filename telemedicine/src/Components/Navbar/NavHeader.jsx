@@ -102,7 +102,8 @@ const NavHeader = () => {
                 <FaHome color="rgb(0,82,93)" size="35px" />
               </MenuButton>
               <MenuList>
-                <MenuItem alignItems="center">SignUp/Login</MenuItem>
+                <Link to="/signup">
+                <MenuItem alignItems="center">SignUp/Login</MenuItem></Link>
                 <Link to="/cart">
                   <MenuItem>
                     Cart

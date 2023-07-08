@@ -12,6 +12,7 @@ import Thankyou from "./Pages/Thankyou";
 
 import NavHeader from "./Components/Navbar/NavHeader";
 import NavFooter from "./Components/Navbar/NavFooter";
+import Signup from "./Pages/SignUp";
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
           <Route path="/address" element={<Address />}></Route>
           <Route path="/payment" element={<Payment />}></Route>
           <Route path="/thankyou" element={<Thankyou />}></Route>
+          <Route path="/signup" element={<Signup />}></Route>
+          
         </Routes>
       </div>
       <NavFooter />

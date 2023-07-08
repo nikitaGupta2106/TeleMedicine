@@ -17,6 +17,7 @@ import {
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
+  
   return (
     <div>
       <Box position="relative">
