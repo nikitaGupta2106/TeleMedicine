@@ -81,7 +81,11 @@ const Product = () => {
           >
             Sort High To Low
           </Button>
-          <Button color="rgb(0,82,93)" onClick={handleViewAll}>
+          <Button
+            color="rgb(0,82,93)"
+            onClick={handleViewAll}
+            marginRight="7px"
+          >
             View All
           </Button>
         </Box>
@@ -90,11 +94,25 @@ const Product = () => {
         <Pagination changePageNo={changePageNo} pageNo={pageNo} />
       </Flex>
       <Flex>
-        <Box w="25%" p={4} color="white" padding="10px 20px">
+        <Box
+          w={{ base: "50%", sm: "50%", md: "30%", lg: "25%" }}
+          p={4}
+          color="white"
+          padding="10px 20px"
+        >
           <ProductsCategories setCategory={setCategory} setPageNo={setPageNo} />
         </Box>
-        <Box w="75%" mb="30px">
-          <Grid templateColumns="repeat(3, 1fr)" gap={6} padding="0 30px">
+        <Box w={{ base: "50%", sm: "50%", md: "70%", lg: "75%" }} mb="30px">
+          <Grid
+            templateColumns={{
+              base: "repeat(1, 1fr)",
+              sm: "repeat(1, 1fr)",
+              md: "repeat(2, 1fr)",
+              lg: "repeat(3, 1fr)",
+            }}
+            gap={6}
+            padding="0 30px"
+          >
             {products.length > 0 &&
               products.map((product) => (
                 <GridItem key={product.id}>

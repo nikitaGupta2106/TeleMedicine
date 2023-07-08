@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Text, Spacer } from "@chakra-ui/react";
+import { Flex, Box, Text, Spacer, Grid, GridItem } from "@chakra-ui/react";
 
 const NavFooter = () => {
   return (
@@ -7,39 +7,73 @@ const NavFooter = () => {
       style={{
         background: "black",
         boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+        // position: "fixed",
+        left: 0,
+        bottom: 0,
+        width: "100%",
       }}
     >
-      <Flex color="white" justifyContent="space-evenly" padding="50px 80px">
-        <Flex direction="column">
-          <Text fontSize="20px" mb="20px">
-            All Medicine
-          </Text>
-          <Text>Health & Care</Text>
-          <Text> Beauty Care</Text>
-        </Flex>
-        <Flex direction="column">
-          <Text fontSize="20px" mb="20px">
-            Doctors
-          </Text>
-          <Text>Physiotherapy</Text>
-          <Text>Heart Specialist</Text>
-        </Flex>
-        <Flex direction="column">
-          <Text fontSize="20px" mb="20px">
-            Hospitals
-          </Text>
-          <Text>Government Listed</Text>
-          <Text>Top Private</Text>
-        </Flex>
-        <Flex direction="column">
-          <Text fontSize="20px" mb="20px">
-            About Us
-          </Text>
-          <Text>Contact Us</Text>
-        </Flex>
-      </Flex>
+      {/* <Flex color="white" justifyContent="space-evenly" padding="50px 80px"> */}
+      <Grid
+        color="white"
+        padding={{
+          base: "50px 0",
+          sm: "50px 0",
+          md: "50px 80px",
+          lg: "50px 80px",
+        }}
+        templateColumns="repeat(4, 1fr)"
+        // gap={6}
+        textAlign="center"
+      >
+        <GridItem>
+          <Flex direction="column">
+            <Text fontSize="20px" mb="20px">
+              All Medicine
+            </Text>
+            <Text>Health & Care</Text>
+            <Text> Beauty Care</Text>
+          </Flex>
+        </GridItem>
+        <GridItem>
+          <Flex direction="column">
+            <Text fontSize="20px" mb="20px">
+              Doctors
+            </Text>
+            <Text>Physiotherapy</Text>
+            <Text>Heart Specialist</Text>
+          </Flex>
+        </GridItem>
+        <GridItem>
+          <Flex direction="column">
+            <Text fontSize="20px" mb="20px">
+              Hospitals
+            </Text>
+            <Text>Government Listed</Text>
+            <Text>Top Private</Text>
+          </Flex>
+        </GridItem>
+        <GridItem>
+          <Flex direction="column">
+            <Text fontSize="20px" mb="20px">
+              About Us
+            </Text>
+            <Text>Contact Us</Text>
+          </Flex>
+        </GridItem>
+      </Grid>
+      {/* </Flex> */}
       <hr />
-      <Flex color="white" justifyContent="space-between" padding=" 25px 100px">
+      <Flex
+        color="white"
+        justifyContent="space-between"
+        padding={{
+          base: "25px 5px",
+          sm: "25px 5px",
+          md: "25px 100px",
+          lg: "25px 100px",
+        }}
+      >
         <Box fontSize="13px">© Healthcare2023 All Rights Reserved.</Box>
         <Flex w="250px">
           <img
