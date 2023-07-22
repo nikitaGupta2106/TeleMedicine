@@ -1,6 +1,6 @@
 # TeleMedicine
 
-Deployed link: https://telemedicine-mu.vercel.app/
+Deployed link: https://telemedicine-fawn.vercel.app
 
 TeckStack: React, Chakra UI, firebase. 
 
